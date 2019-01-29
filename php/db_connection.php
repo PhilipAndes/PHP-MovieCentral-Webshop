@@ -1,21 +1,21 @@
 <?php
 
-//DB_CONNECTION
+//DB_CONNECTION.PHP
 
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "MovieCentral"; //database name
+$database = "moviecentral"; //DB Name
 
 try {
-    &conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    //set the PDO error mode to exception
+    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+    // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //echo "Connection successfully: <br>";
+    //echo "Connected successfully: <br>"; 
     }
 catch(PDOException $e)
     {
     echo "Connection failed: " . $e->getMessage();
     }
-
+    
 ?>

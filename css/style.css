@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kosugi', sans-serif;
+    background-image: url(../img/background_1.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* .debug {
+    border: 1px solid red;
+} */
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+.brandingText { 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: 0 0 10px #000;
+}
+
+/* LOGIN BUTTON */
+.loginButton {
+    position: absolute;
+    left: 35px;
+    top: 35px;
+    cursor: pointer; /* cursor = pointer on menu button */
+}
+
+/* Set a style for all buttons */
+.loginButton button {
+    background-color: #6CC9EA;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 12px;
+    font-family: 'Kosugi', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    /* border: 1px solid #fff; */
+  }
+  
+  .loginButton button:hover {
+    color: #fff;
+    /* background: ; */
+    opacity:1;
+  }
+
