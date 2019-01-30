@@ -77,14 +77,14 @@ span.psw {
   
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fff;
     margin: 0 auto; /*centered */
     /* border: 1px solid red; */
     /* width: 50%; Could be more or less, depending on screen size */
     max-width: 400px;
     /* width: 100%; for full screen width */
     padding: 10px 20px;
-    background: #7BD1EE;
+    /* background: #7BD1EE; */
+    background-image: linear-gradient(to bottom, rgb(1, 79, 112), #7BD1EE, #fff);
     border-radius: 8px;
 }
   

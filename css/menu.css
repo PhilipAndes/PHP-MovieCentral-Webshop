@@ -68,7 +68,9 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #7BD1EE;
+    /* background: #7BD1EE; */
+    /* background-image: linear-gradient(to bottom, rgb(1, 79, 112), #7BD1EE, #fff); */
+    background-image: linear-gradient(to right, #fff, #7BD1EE, #3E6B8E);
     opacity: 0.9;
     list-style: none;
     transform: translate3d(0, -100%, 0); /*Hide oustide the top screen */
@@ -99,13 +101,15 @@
   /*Left side menu */
   .menu-branding {
     background: #0A78A7;
+    background-image: url(../img/menu_1.jpg);
+    background-position: center;
+    background-size: cover;
     opacity: 0.9;
     transform: translate3d(0, 100%, 0); /*Hide outside the bottom screen */
     transition: all 0.5s ease-out; 
   }
 
   .menu-image {
-    /* position: fixed; */
     height: 100%;
     width: 100%;
     /* border-radius: 50%; to make the image round*/

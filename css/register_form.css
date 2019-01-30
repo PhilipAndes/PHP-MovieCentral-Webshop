@@ -6,13 +6,19 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form {
+
+.register-form {
     max-width: 400px;
-    margin: 10px auto;
+    margin: 30px auto;
     padding: 10px 20px;
-    background: #abcdef;
+    background-image: linear-gradient(to bottom, rgb(0, 150, 214), #7BD1EE);
     border-radius: 8px;
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.3);
   }
+
+.register-form h2 {
+  color: #fff;
+}  
 
 /* Style the input container */
 .input-container {
@@ -26,7 +32,7 @@ form {
 /* Style the form icons */
 .icon {
   padding: 10px;
-  background: dodgerblue;
+  background-color: #0A78A7;
   color: white;
   min-width: 50px;
   text-align: center;
@@ -40,7 +46,7 @@ form {
 }
 
 .input-field:focus {
-  border: 2px solid dodgerblue;
+  border: 2px solid #0A78A7;
 }
 
 /* Style the select field Country */
@@ -50,14 +56,14 @@ select {
   }
   
 select:focus {
-    border: 2px solid dodgerblue;
+    border: 2px solid #0A78A7;
   }
 
 
 
 /* Set a style for the submit button */
 .btn {
-  background-color: dodgerblue;
+  background-color: #0A78A7;
   color: white;
   padding: 15px 20px;
   margin: 5px auto;
@@ -71,5 +77,5 @@ select:focus {
 }
 
 .btn:hover {
-  opacity: 1;
+  opacity: 0.8;
 }

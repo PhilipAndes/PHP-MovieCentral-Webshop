@@ -16,6 +16,7 @@
 </head>
 <body>
 
+
 <!-- Button to open the modal login form ----------------------------------------------------------------->
     <div class="loginButton debug">
         <button onclick="document.getElementById('id01').style.display='block'">Login</button>   
@@ -29,7 +30,7 @@
 
     <!-- Modal Content -->
         <!-- avatar -->
-        <form class="modal-content animate debug" action="#">
+        <form class="modal-content animate debug" action="php/login_form/login_handler.php" method="POST">
             <div class="imgcontainer debug">
                 <img src="img/avatar_2.png" alt="Avatar" class="avatar">
             </div>
@@ -37,14 +38,32 @@
             <!-- email and password login -->
             <div class="container debug">
                 <label for="uname"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="uname" autofocus required>
+                <input type="text" placeholder="Enter Email" name="user_email" autofocus required>
 
                 <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <input type="password" placeholder="Enter Password" name="user_password" required>
 
-                <!-- login and register button -->
-                <button type="submit">Login</button>
-                <button type="submit">Register</button>
+                <!-- login button -->
+                <!-- <button type="submit">Login</button> -->
+
+                <!-- login / error message -->
+                <?php 
+                
+                    if(isset($_GET['msg'])){
+                        if ($_GET['msg'] == 1){
+                            echo '<button type="submit">Welcome</button>';
+                        }
+                        if ($_GET['msg'] == 2){
+                            echo '<button type="submit">Email / password is incorrect</button>';
+                        }
+                        
+                    }else{
+                        echo '<button type="submit">Login</button>';
+                    }
+                ?>
+
+                <!-- register button -->
+                <button onclick="location.href='register.php';" id="registerButton";>Register</button>
                 
                 <!-- Checkbox remember me -->
                 <label>
@@ -56,9 +75,7 @@
                     <span class="psw debug">Forgot <a href="#">password?</a></span>
             </div>
         </form>
-    
-</div>
-
+    </div>
 
 <!-- Flex Container -------------------------------------------------------------------------------------->
     <div class="flexContainer debug">
@@ -88,7 +105,7 @@
         <nav class="menu debug">
             <div class="menu-branding debug">
                 <div class="menu-text debug">
-                    <img src="img/menu_1.jpg" class="menu-image debug"/> 
+                    <!-- <img src="img/menu_1.jpg" class="menu-image debug"/>  -->
                 </div>
             </div>            
 
@@ -96,20 +113,18 @@
             <ul class="menu-nav debug">
                 <li class="nav-item current debug">
                     <a href="index.php" class="nav-link">
-                       Home 
+                    Home 
                     </a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a href="about.html" class="nav-link">
-                        About Me
-                    </a> -->
-                <!-- <li class="nav-item">
-                    <a href="myprojects.html" class="nav-link">
-                        My Projects 
-                    </a> -->
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    Movies
+                    </a>
+
                 <li class="nav-item debug">
-                    <a href="contact.html" class="nav-link debug">
-                        Contact 
+                    <a href="#" class="nav-link debug">
+                    Contact 
                     </a>
                 </li>
             </ul>
@@ -121,5 +136,7 @@
     <script src="js/menu.js"></script>
     <!-- js login button -->
     <script src="js/login_button.js"></script>
+    <!-- js register button -->
+    <!-- <script src="js/register_button.js"></script>    -->
 </body>
 </html>

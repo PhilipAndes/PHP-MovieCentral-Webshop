@@ -48,8 +48,9 @@
             }
         
         $conn = null;
-    
-       // header("Location: index.php");  
+        
+        header("location:../../index.php");
+       
 
         // $folderString = "../img/";
         // $folderString .= $_GET["user_firstname"];
