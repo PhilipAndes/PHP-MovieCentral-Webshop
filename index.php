@@ -16,10 +16,33 @@
 </head>
 <body>
 
+<!-- Flex Container -------------------------------------------------------------------------------------->
+   
+<div class="flexContainer debug">
+        <!-- Website name -->
+        <div class="brandingText debug">
+            <h1>Movie Central</h1>
+        </div>
+
+    </div>
+
 
 <!-- Button to open the modal login form ----------------------------------------------------------------->
     <div class="loginButton debug">
-        <button onclick="document.getElementById('id01').style.display='block'">Login</button>   
+        <?php
+        session_start();
+
+            if(!isset($_SESSION['userLoggedIn'])){
+                echo '<button onclick="showBlock()">Login</button>';              
+            }else{
+                if($_SESSION['userLoggedIn'] == true){
+                    echo '<button onclick="goToPage()">' . $_SESSION['user_firstname'] . '</button>';
+                }else{
+                    echo '<button onclick="showBlock()">Try again</button>';                           
+                }  
+            }
+        
+        ?>  
     </div>
 
 <!-- The Modal ------------------------------------------------------------------------------------------->
@@ -44,23 +67,7 @@
                     <input type="password" placeholder="Enter Password" name="user_password" required>
 
                 <!-- login button -->
-                <!-- <button type="submit">Login</button> -->
-
-                <!-- login / error message -->
-                <?php 
-                
-                    if(isset($_GET['msg'])){
-                        if ($_GET['msg'] == 1){
-                            echo '<button type="submit">Welcome</button>';
-                        }
-                        if ($_GET['msg'] == 2){
-                            echo '<button type="submit">Email / password is incorrect</button>';
-                        }
-                        
-                    }else{
-                        echo '<button type="submit">Login</button>';
-                    }
-                ?>
+                <button type="submit">Login</button>
 
                 <!-- register button -->
                 <button onclick="location.href='register.php';" id="registerButton";>Register</button>
@@ -75,13 +82,6 @@
                     <span class="psw debug">Forgot <a href="#">password?</a></span>
             </div>
         </form>
-    </div>
-
-<!-- Flex Container -------------------------------------------------------------------------------------->
-    <div class="flexContainer debug">
-        <div class="brandingText debug">
-            <h1>Movie Central</h1>
-        </div>
     </div>
  
 <!-- Menu button top right-------------------------------------------------------------------------------->
@@ -117,8 +117,8 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item debug">
+                    <a href="movies.php" class="nav-link">
                     Movies
                     </a>
 
@@ -136,7 +136,5 @@
     <script src="js/menu.js"></script>
     <!-- js login button -->
     <script src="js/login_button.js"></script>
-    <!-- js register button -->
-    <!-- <script src="js/register_button.js"></script>    -->
 </body>
 </html>

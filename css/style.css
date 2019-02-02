@@ -14,10 +14,23 @@ body {
     border: 1px solid red;
 } */
 
+/* FLex box ///////////////////////////////////////////*/
 .flexContainer {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    /* height: 100vh; */
+}
+
+/* FLex menu///////////////////////////////////////////*/
+.flexContainer1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -26,6 +39,8 @@ body {
 
 
 .brandingText { 
+    /* display: flex;
+    flex: 1; */
     justify-content: center;
     align-items: center;
     color: white;
@@ -33,10 +48,12 @@ body {
     text-shadow: 0 0 10px #000;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    margin: 200px auto;
+    font-family: "Avengeance Mightiest Avenger";
 }
 
-/* LOGIN BUTTON */
+/* LOGIN BUTTON ////////////////////////////////////////////////////////////*/
 .loginButton {
     position: absolute;
     left: 35px;

@@ -69,8 +69,9 @@
     margin: 0;
     padding: 0;
     /* background: #7BD1EE; */
-    /* background-image: linear-gradient(to bottom, rgb(1, 79, 112), #7BD1EE, #fff); */
-    background-image: linear-gradient(to right, #fff, #7BD1EE, #3E6B8E);
+    background-image: linear-gradient(to bottom, rgb(1, 79, 112), #7BD1EE, #fff);
+    /* background-image: linear-gradient(to right, #fff, #7BD1EE, #3E6B8E); */
+    /* background-image: linear-gradient(to right, rgba(0, 0, 0), rgb(255, 255, 255)); */
     opacity: 0.9;
     list-style: none;
     transform: translate3d(0, -100%, 0); /*Hide oustide the top screen */
@@ -100,6 +101,7 @@
   
   /*Left side menu */
   .menu-branding {
+    /* background-image: linear-gradient(to left, rgba(0, 0, 0), rgb(255, 255, 255)); */
     background: #0A78A7;
     background-image: url(../img/menu_1.jpg);
     background-position: center;
@@ -130,6 +132,7 @@
     color: #fff;
     text-decoration: none;
     transition: all 0.5s ease-out; 
+    /* font-family: "Plane Crash"; */
   }
 
   /* Menu links animation come in screen with 0.1s delay each*/
