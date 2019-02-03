@@ -20,3 +20,18 @@ function goToPage(){
   console.log("goToPage");
   window.location.href = 'logOut.php';
 }
+
+
+//get the dropdown
+// var dropDown = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+// window.onmouseover = function(event) {
+//   if (event.target == dropDown) {
+//     modal.style.display = "none";
+//   }
+// }
+// function showDrp(){
+//   console.log("showDrp");
+//   document.getElementById("id02").style.display="block";
+// }

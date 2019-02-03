@@ -40,18 +40,22 @@
                         '<button onmouseover="showDrp" class="dropBtn">' . $_SESSION['user_firstname'] . '</button>' .
                         '<div class="dropDownContent">' . 
                         '<a href="#">' . 'My Page' . '</a>' .
-                        '<a href="logOut.php">' . 'Log Out' . '</a>' .
+                        '<a href="#">' . 'Log Out' . '</a>' .
                         '</div>' .
                         '</div>';
                 }else{
                     echo '<button onclick="showBlock()">Try again</button>';                           
                 }  
             }
+        
         ?>  
     </div>
 
 <!-- The Modal ------------------------------------------------------------------------------------------->
     <div id="id01" class="modal debug">
+
+        <!-- close button -->
+        <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Login">&times;</span> -->
 
     <!-- Modal Content -->
         <!-- avatar -->
@@ -81,11 +85,11 @@
             
                 <!-- Cancel button and forgot password? -->
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn debug">Cancel</button>
-                    <span class="psw debug">Forgot <a href="#">password?</a></span>
+                    <!-- <span class="psw debug">Forgot <a href="#">password?</a></span> -->
             </div>
         </form>
     </div>
- 
+
 <!-- Menu button top right-------------------------------------------------------------------------------->
     <header>
         <div class="menu-btn debug">
@@ -131,7 +135,9 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </header>    
+ 
+
 
 <!-- JavaScript ------------------------------------------------------------------------------------------->
     <!-- js menu button -->

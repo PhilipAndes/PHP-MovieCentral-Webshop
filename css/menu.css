@@ -47,6 +47,7 @@
     width: 100%;
     opacity: 1; /*Menu background opacity, change to see through */
     visibility: hidden; /*Hidden when closed */
+    z-index: 2;
   }
   
   /*Visible when open */

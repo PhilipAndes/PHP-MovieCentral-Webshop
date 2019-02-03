@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Kosugi', sans-serif;
+    /* width: 100%; */
     /* background-image: linear-gradient(to bottom, rgb(0, 150, 214), #7BD1EE); */
     /* background: #000; */
     /* background-image: linear-gradient(to right, rgba(0, 0, 0), rgb(255, 255, 255)); */
@@ -18,7 +19,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     height: 100px;
-    margin-bottom: 5px;
+    margin: 20px auto;
     flex-direction: column;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(255, 255, 255));
     border-radius: 12px;
@@ -32,9 +33,9 @@ body {
     /* align-content: center; */
     flex-direction: row;
     flex: 1;
-    font-size: 50px;
+    font-size: 60px;
+    margin-top: 10px;
     font-family: "Plane Crash";
-    top: 0;
     align-items: center;
     /* background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255)); */
     /* margin: 5px auto; */
@@ -49,79 +50,120 @@ body {
     align-items: center;
   }
   
-  .card {
-      box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.3);
-      height: 700px;
-      max-width: 300px;
-      margin: 15px;
-      text-align: center;
-      font-family: arial;
-      /* background-image: linear-gradient(to bottom, rgb(0, 150, 214), #7BD1EE); */
-      background: #fff;
-      /* background-color: #0069B1; */
-      border-radius: 12px;
-      border: 1px solid #fff;
-    }
+.card {
+    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.3);
+    height: 500px;
+    max-width: 300px;
+    margin: 15px;
+    text-align: center;
+    font-family: arial;
+    /* background-image: linear-gradient(to bottom, rgb(0, 150, 214), #7BD1EE); */
+    background: #fff;
+    /* background-color: #0069B1; */
+    border-radius: 12px;
+    border: 1px solid #fff;
+  }
   
-  /* h1 */
-    .card h1 {
-        color: #000;
-        background-color: #fff;
-        background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255));
-        margin: 10px 20px 10px 20px;
-        border-radius: 12px;
-        font-size: 20px;
-    }
+/* h1 */
+.card h1 {
+    color: #000;
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255));
+    margin: 10px 20px 10px 20px;
+    border-radius: 12px;
+    font-size: 20px;
+}
   
-  /* price */  
-    .price {
-      color: #fff;
-      font-size: 28px;
-      background: #000;
-      margin: 0 50px 0 50px;
-      border-radius: 12px;
-    }
+/* price */  
+.price {
+  color: #fff;
+  font-size: 28px;
+  background: #000;
+  margin: 0 50px 0 50px;
+  border-radius: 12px;
+}
   
-  /* button */  
-    .card button {
-      border: none;
-      outline: 0;
-      padding: 12px;
-      color: white;
-      background-color: #000;
-      background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255));
-      text-align: center;
-      cursor: pointer;
-      width: 100%;
-      font-size: 18px;
-      border-radius: 12px;
-    }
+/* button */  
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255));
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 12px;
+}
   
-  /* on hover button */  
-    .card button:hover {
-      /* opacity: 0.7; */
+/* on hover button */  
+.card button:hover {
+  /* opacity: 0.7; */
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+}
+  
+/* card image */
+.card img {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+}
+  
+/* gamestop text on cards */
+  /* .gamestop {
       color: #000;
-      background-color: #fff;
+      font-size: 25px;
       font-weight: bold;
-    }
+  } */
   
-  /* card image */
-    .card img {
-        width: 100%;
-        height: 350px;
-        border-radius: 12px;
-    }
-  
-  /* gamestop text on cards */
-    /* .gamestop {
-        color: #000;
-        font-size: 25px;
-        font-weight: bold;
-    } */
-  
-  /* gameinfo text */
-    .gameinfo {
-        color: #000;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+/* gameinfo text */
+.movieInfo {
+    color: #000;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* The sidebar menu /////////////////////////////////////////////////////////////*/
+.sidenav {
+  /* Full-height: remove this if you want "auto" height */
+  height: 100%; 
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 130px; /* position from top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  border-radius:0 12px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  /* padding: 0px 10px; */
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

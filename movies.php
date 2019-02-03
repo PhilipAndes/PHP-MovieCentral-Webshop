@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <!-- js sidebar -->
+    <script src="js/movie_filter_genre.js"></script>
     <title>Movies</title>
 </head>
 <body>
@@ -68,12 +70,31 @@
         </nav>
     </header>
 
+<!-- Side navigation !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <div class="sidenav">
+        <!-- <a href="#">About</a> -->
+        <form>
+            <select name="users" onchange="showGenre(this.value)">
+            <option value="">Select a Genre:</option>
+            <option value="1">Action</option>
+            <option value="2">Horror</option>
+            <option value="3">Comedy</option>
+            <option value="4">Science Fiction</option>
+            </select>
+        </form>
+        <!-- <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a> -->
+    </div>
 
+<div class="main">
+   
     <!-- PHP CARDS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->         
     <div class="cards debug">
         <?php include "php/movie_card/movie_card.php"; ?>
     </div>
     
+</div> 
 <!-- JavaScript ------------------------------------------------------------------------------------------->
     <!-- js menu button -->
     <script src="js/menu.js"></script>

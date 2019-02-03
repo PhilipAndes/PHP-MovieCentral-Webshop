@@ -12,8 +12,8 @@
              '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="width:100%">' .
              '<h1>' . $row['movie_name']  . '</h1>' .
              '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' .
-             '<p class="gameinfo">' . $row['movie_info'] . '</p>' . 
-             '<a href="games.php?id=' . $row['movie_id'] . '">' .          
+            //  '<p class="movieInfo">' . $row['movie_info'] . '</p>' . 
+            //  '<a href="games.php?id=' . $row['movie_id'] . '">' .          
              '<p>' . '<button>' . 'Click For More Info' . '</button>' . '</p>' .
              '</a>' .
              '</div>';

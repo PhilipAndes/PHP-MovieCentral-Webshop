@@ -63,7 +63,8 @@
             <div class="input-container">
                 <label class="fa fa-globe icon"></label>
                     <select  name="user_country" required>
-                        <optgroup label="Country">                      
+                        <optgroup label="Country">
+                            <option value="">Select a Country:</option>                      
                             <option value="netherlands">Netherlands</option>
                             <option value="germany">Germany</option>               
                             <option value="france">France</option>
