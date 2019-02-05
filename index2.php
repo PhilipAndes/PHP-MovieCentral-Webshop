@@ -1,148 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
-    <!-- overal style -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- menu css: -->
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <!-- login button css: -->
-    <link rel="stylesheet" type="text/css" href="css/login_button.css">
-    <title>Welcome</title>
-</head>
-<body>
+<?php
+	
+session_start();
 
-<!-- Flex Container -------------------------------------------------------------------------------------->
-   
-<div class="flexContainer debug">
-        <!-- Website name -->
-        <div class="brandingText debug">
-            <h1>Movie Central</h1>
-        </div>
-
-    </div>
+//connection to database
+include "php/db_connection.php";
 
 
-<!-- Button to open the modal login form ----------------------------------------------------------------->
-    <div class="loginButton debug">
-        <?php
-        session_start();
+    if(isset($_POST["add_to_cart"]))
+    {        
+      if(isset($_SESSION["shopping_cart"]))
+      {
+        $item_array_id = array_column($_SESSION["shopping_cart"], "movie_id");
+        if(!in_array($_GET["id"], $item_array_id))
+        {
+          $count = count($_SESSION["shopping_cart"]);
 
-            if(!isset($_SESSION['userLoggedIn'])){
-                echo '<button onclick="showBlock()">Login</button>';              
-            }else{
-                if($_SESSION['userLoggedIn'] == true){
-                    echo '<div class="dropDown">' . 
-                        '<button onmouseover="showDrp" class="dropBtn">' . $_SESSION['user_firstname'] . '</button>' .
-                        '<div class="dropDownContent">' . 
-                        '<a href="#">' . 'My Page' . '</a>' .
-                        '<a href="#">' . 'Log Out' . '</a>' .
-                        '</div>' .
-                        '</div>';
-                }else{
-                    echo '<button onclick="showBlock()">Try again</button>';                           
-                }  
+            //get all movie detail
+            $item_array = array(
+                'movie_id' => $_GET["id"],
+                'movie_img' => $_POST["hidden_image"],
+                'movie_name' => $_POST["hidden_name"],
+                'movie_price' => $_POST['hidden_price'],
+                'movie_quantity' => $_POST["quantity"]
+            );
+
+            $_SESSION["shopping_cart"][$count] = $item_array;
+
+        } else {
+            //movie added then this block 
+            echo '<script>alert("Item allready added ")</script>';
+            echo '<script>window.location = "index2.php"</script>';
+        }
+      } else {
+        //cart is empty excute this block
+            $item_array = array(
+                'movie_id' => $_GET["id"],
+                'movie_img' => $_POST["hidden_image"],
+                'movie_name' => $_POST["hidden_name"],
+                'movie_price' => $_POST['hidden_price'],
+                'movie_quantity' => $_POST["quantity"]
+            );
+
+        $_SESSION["shopping_cart"][0] = $item_array;
+      }
+    }
+
+    //Remove item in cart 
+    if(isset($_GET["action"]))
+    {
+      if($_GET["action"] == "delete")
+      {
+        foreach($_SESSION["shopping_cart"] as $key=>$value)
+            {
+              if($value["movie_id"] == $_GET["id"])
+              {
+                unset($_SESSION["shopping_cart"][$key]);
+                echo '<script>alert("Item removed")</script>';
+                echo '<script>window.location="index2.php</script>';
+              }
             }
-        
-        ?>  
-    </div>
+      }
+    }
+?>
+	
+<!DOCTYPE html>  	
+<html>  
+    <head>  
+        <title>Simple PHP Mysql Shopping Cart</title>  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    </head>  
+    <body>  
+        <div class="container" style="width:1000px;">  
 
-<!-- The Modal ------------------------------------------------------------------------------------------->
-    <div id="id01" class="modal debug">
+            <?php
 
-        <!-- close button -->
-        <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Login">&times;</span> -->
+                $sql_qury = "SELECT * FROM movies ORDER BY movie_id ASC";
 
-    <!-- Modal Content -->
-        <!-- avatar -->
-        <form class="modal-content animate debug" action="php/login_form/login_handler.php" method="POST">
-            <div class="imgcontainer debug">
-                <img src="img/avatar_2.png" alt="Avatar" class="avatar">
-            </div>
+                $db_result = $conn->query($sql_qury);
 
-            <!-- email and password login -->
-            <div class="container debug">
-                <label for="uname"><b>Email</b></label>
-                <input type="email" placeholder="Enter Email" name="user_email" autofocus required>
-
-                <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="user_password" required>
-
-                <!-- login button -->
-                <button type="submit">Login</button>
-
-                <!-- register button -->
-                <button onclick="location.href='register.php';" id="registerButton";>Register</button>
-                
-                <!-- Checkbox remember me -->
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                foreach ($db_result as $row)
+                {                 
+                }       
             
-                <!-- Cancel button and forgot password? -->
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn debug">Cancel</button>
-                    <!-- <span class="psw debug">Forgot <a href="#">password?</a></span> -->
-            </div>
-        </form>
-    </div>
+                $conn = null;
+        
+            ?>
 
-<!-- Menu button top right-------------------------------------------------------------------------------->
-    <header>
-        <div class="menu-btn debug">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
+        <div class="col-md-4">  
+            <form method="post" action="index2.php?action=add&id=<?php echo $row["movie_id"];?>">  
 
-        <!-- Menu navigation menu text-->
-        <!-- <nav class="menu">
-            <div class="menu-branding">
-                <div class="menu-text">
-                    <span class="text1">MovieCentral</span>
-                    <span class="text2"></span>
-                </div>
-            </div> -->
+                <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center"> 
 
-        <!-- Menu navigation menu image-->
-        <nav class="menu debug">
-            <div class="menu-branding debug">
-                <div class="menu-text debug">
-                    <!-- <img src="img/menu_1.jpg" class="menu-image debug"/>  -->
-                </div>
-            </div>            
+                    <img src="/img/movies/<?php echo $row['movie_img'];?>" class="img-responsive"/><br /> 
 
-            <!-- Menu links-->
-            <ul class="menu-nav debug">
-                <li class="nav-item current debug">
-                    <a href="index.php" class="nav-link">
-                    Home 
-                    </a>
-                </li>
+                    <h4 class="text-info"><?php echo $row['movie_name'];?></h4> 
 
-                <li class="nav-item debug">
-                    <a href="movies.php" class="nav-link">
-                    Movies
-                    </a>
+                    <h4 class="text-danger">€<?php echo $row['movie_price'];?></h4>
 
-                <li class="nav-item debug">
-                    <a href="#" class="nav-link debug">
-                    Contact 
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>    
- 
+                    <input type="text" name="quantity" class="form-control" value="1" />  
+                    <input type="hidden" name="hidden_name" value="<?php echo $row['movie_name'];?>" />
+                    <input type="hidden" name="hidden_image" value="<?php echo $row['movie_img'];?>">
+                    <input type="hidden" name="hidden_price" value="<?php echo $row['movie_price'];?>">
+                    <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
+                </div>  
+            </form>  
+        </div>  
 
+        <div style="clear:both"></div>  
 
-<!-- JavaScript ------------------------------------------------------------------------------------------->
-    <!-- js menu button -->
-    <script src="js/menu.js"></script>
-    <!-- js login button -->
-    <script src="js/login_button.js"></script>
-</body>
+        <br />  
+
+        <h3>Order Details</h3>  
+
+            <div class="table-responsive">  
+                <table class="table table-bordered">  
+                    <tr> 
+                        <th>Movie image</th> 
+                        <th width="40%">Movie Name</th>
+                        <th width="10%">Quantity</th>     
+                        <th width="20%">Price</th>  
+                        <th width="15%">Total</th>  
+                        <th width="5%">Action</th>  
+                    </tr>  
+
+                    <?php 
+
+                        if(!empty($_SESSION["shopping_cart"]))
+                        {
+
+                            $total = 0;
+
+                            foreach($_SESSION["shopping_cart"] as $key => $value)
+                            {
+                                ?>
+
+                                <tr> 
+                                    <td><img src="/img/movies/ <?php echo $value['movie_img'];?>" style="width: 100px;"></td>
+                                    <td><?php echo $value['movie_name'];?></td>
+                                    <td><?php echo $value['movie_quantity']; ?></td>  
+                                    <td>€<?php echo $value['movie_price'];?></td>  
+                                    <td>€<?php echo number_format($value["movie_quantity"] * $value["movie_price"],2);?></td>  
+                                    <td><a href="index2.php?action=delete&id=<?php echo $value['movie_id'];?>"><span class="btn btn-danger">Remove</span></a></td>  
+                                </tr>  
+
+                                <?php $total = $total + ($value["movie_quantity"] * $value['movie_price']);
+                            }
+
+                                ?>
+                                    <tr>  
+                                    <td colspan="3" align="right">Total</td>  
+                                    <td align="right">€<?php echo number_format($total);?></td>  
+                                    <td></td>  
+                                    </tr> 
+
+                            <?php 
+                        } 
+                            ?> 
+
+                </table>  
+            </div>  
+        </div>   
+    </body>  
 </html>

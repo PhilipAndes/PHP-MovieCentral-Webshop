@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Add icon library -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
     <!-- Add login_form.css -->
@@ -19,6 +19,49 @@
     <title>Login-form</title>
 </head>
 <body>
+
+<!-- Menu button top right-------------------------------------------------------------------------------->
+    <header>
+        <div class="menu-btn debug">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <!-- Menu navigation menu image-->
+        <nav class="menu debug">
+            <div class="menu-branding debug">
+                <div class="menu-text debug">
+                    <!-- <img src="img/menu_1.jpg" class="menu-image debug"/>  -->
+                </div>
+            </div>            
+
+            <!-- Menu links-->
+            <ul class="menu-nav debug">
+                <li class="nav-item debug">
+                    <a href="index.php" class="nav-link">
+                    <i class="fa fa-fw fa-home"></i>
+                    Home 
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                    <i class="fas fa-desktop"></i>
+                    Movies
+                    </a>
+
+                <li class="nav-item debug">
+                    <a href="#" class="nav-link debug">
+                    <i class="fa fa-fw fa-envelope"></i>
+                    Contact 
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
     
     <form class="register-form" action="php/register_form/register_handler.php" method="POST">
         <h2>Register</h2>
@@ -84,53 +127,6 @@
         <button type="reset" value="Reset" class="btn">Reset</button>
     </form>
 
-
-<!-- Menu button top right-------------------------------------------------------------------------------->
-<header>
-        <div class="menu-btn debug">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
-
-        <!-- Menu navigation menu text-->
-        <!-- <nav class="menu">
-            <div class="menu-branding">
-                <div class="menu-text">
-                    <span class="text1">MovieCentral</span>
-                    <span class="text2"></span>
-                </div>
-            </div> -->
-
-        <!-- Menu navigation menu image-->
-        <nav class="menu debug">
-            <div class="menu-branding debug">
-                <div class="menu-text debug">
-                    <!-- <img src="img/menu_1.jpg" class="menu-image debug"/>  -->
-                </div>
-            </div>            
-
-            <!-- Menu links-->
-            <ul class="menu-nav debug">
-                <li class="nav-item debug">
-                    <a href="index.php" class="nav-link">
-                    Home 
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    Movies
-                    </a>
-
-                <li class="nav-item debug">
-                    <a href="#" class="nav-link debug">
-                    Contact 
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
 
 <!-- JavaScript ------------------------------------------------------------------------------------------->
     <!-- js menu button -->
