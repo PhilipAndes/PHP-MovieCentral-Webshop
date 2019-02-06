@@ -10,13 +10,13 @@ include "php/db_connection.php";
     {        
       if(isset($_SESSION["shopping_cart"]))
       {
-        $item_array_id = array_column($_SESSION["shopping_cart"], "movie_id");
-        if(!in_array($_GET["id"], $item_array_id))
+        $movie_array_id = array_column($_SESSION["shopping_cart"], "movie_id");
+        if(!in_array($_GET["id"], $movie_array_id))
         {
           $count = count($_SESSION["shopping_cart"]);
 
-            //get all movie detail
-            $item_array = array(
+            //get all movie details
+            $movie_array = array(
                 'movie_id' => $_GET["id"],
                 'movie_img' => $_POST["hidden_image"],
                 'movie_name' => $_POST["hidden_name"],
@@ -24,7 +24,7 @@ include "php/db_connection.php";
                 'movie_quantity' => $_POST["quantity"]
             );
 
-            $_SESSION["shopping_cart"][$count] = $item_array;
+            $_SESSION["shopping_cart"][$count] = $movie_array;
 
         } else {
             //movie added then this block 
@@ -33,7 +33,7 @@ include "php/db_connection.php";
         }
       } else {
         //cart is empty excute this block
-            $item_array = array(
+            $movie_array = array(
                 'movie_id' => $_GET["id"],
                 'movie_img' => $_POST["hidden_image"],
                 'movie_name' => $_POST["hidden_name"],
@@ -41,7 +41,7 @@ include "php/db_connection.php";
                 'movie_quantity' => $_POST["quantity"]
             );
 
-        $_SESSION["shopping_cart"][0] = $item_array;
+        $_SESSION["shopping_cart"][0] = $movie_array;
       }
     }
 
@@ -66,7 +66,11 @@ include "php/db_connection.php";
 <!DOCTYPE html>  	
 <html>  
     <head>  
-        <title>Simple PHP Mysql Shopping Cart</title>  
+        <title>Simple PHP Mysql Shopping Cart</title>
+        <!-- movie cards css -->
+        <link rel="stylesheet" type="text/css" href="css/movies.css"/>
+        <!-- movie cards info css -->
+        <link rel="stylesheet" type="text/css" href="css/movie_info.css"/>  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
@@ -76,37 +80,51 @@ include "php/db_connection.php";
 
             <?php
 
-                $sql_qury = "SELECT * FROM movies ORDER BY movie_id ASC";
+                $sql_query = "SELECT * FROM movies ORDER BY movie_id DESC";
 
-                $db_result = $conn->query($sql_qury);
+                $db_result = $conn->query($sql_query);
 
                 foreach ($db_result as $row)
-                {                 
+                {  
+                //   echo $row['movie_id'];
+                  '<div class="col-md-4">' .  
+                  '<form method="post"' . 'action="index2.php?action=add&id=<?php echo $row["movie_id"];?>">' .  
+                      '<div class="card"' . 'style="height: 540px;">' .
+
+                          '<img src="/codegorilla/moviecentral/img/<?php echo $row["movie_img"];?>"' . 'class="img-responsive"/>' . '<br/> ' . 
+
+                          '<h4 class="text-info">' . '<?php echo $row["movie_name"];?>' . '</h4>' . 
+                          '<h4 class="text-danger">' . '€' . '<?php echo $row["movie_price"];?>' . '</h4>' .
+                          'Quantity:' .
+                          '<input type="text" name="quantity" class="form-control" value="1" />' .  
+                          '<input type="hidden" name="hidden_name" value="<?php echo $row["movie_name"];?>" />' .
+                          '<input type="hidden" name="hidden_image" value="<?php echo $row["movie_img"];?>">' .
+                          '<input type="hidden" name="hidden_price" value="<?php echo $row["movie_price"];?>">' .
+                          '<input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />' .
+                      '</div>' .  
+                  '</form>' .  
+              '</div>';
                 }       
             
                 $conn = null;
         
             ?>
 
-        <div class="col-md-4">  
+        <!-- <div class="col-md-4">  
             <form method="post" action="index2.php?action=add&id=<?php echo $row["movie_id"];?>">  
-
-                <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center"> 
-
-                    <img src="/img/movies/<?php echo $row['movie_img'];?>" class="img-responsive"/><br /> 
-
+                <div class="card" style="height: 540px;">
+                    <img src="/codegorilla/moviecentral/img/<?php echo $row['movie_img'];?>" class="img-responsive"/><br /> 
                     <h4 class="text-info"><?php echo $row['movie_name'];?></h4> 
-
                     <h4 class="text-danger">€<?php echo $row['movie_price'];?></h4>
-
+                    Quantity:
                     <input type="text" name="quantity" class="form-control" value="1" />  
                     <input type="hidden" name="hidden_name" value="<?php echo $row['movie_name'];?>" />
                     <input type="hidden" name="hidden_image" value="<?php echo $row['movie_img'];?>">
                     <input type="hidden" name="hidden_price" value="<?php echo $row['movie_price'];?>">
-                    <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />  
+                    <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
                 </div>  
             </form>  
-        </div>  
+        </div>   -->
 
         <div style="clear:both"></div>  
 
@@ -137,7 +155,7 @@ include "php/db_connection.php";
                                 ?>
 
                                 <tr> 
-                                    <td><img src="/img/movies/ <?php echo $value['movie_img'];?>" style="width: 100px;"></td>
+                                    <td><img src="/codegorilla/moviecentral/img/<?php echo $value['movie_img'];?>" style="width: 100px;"></td>
                                     <td><?php echo $value['movie_name'];?></td>
                                     <td><?php echo $value['movie_quantity']; ?></td>  
                                     <td>€<?php echo $value['movie_price'];?></td>  

@@ -72,11 +72,14 @@
         <?php
             include "php/db_connection.php";
 
-            $id = $_GET['id'];                
+            $id = $_GET['id'];
+            // $user_id = $_GET['uid'];                
 
             $movieInfo = "SELECT * FROM movies WHERE movie_id = '$id'";
+            // $userInfo = "SELECT * FROM users WHERE user_id = '$user_id'";
 
             $db_result = $conn->query($movieInfo); 
+            // $db_result = $conn->query($userInfo); 
             
             foreach ($db_result as $row)
             {            
@@ -98,7 +101,7 @@
 
 
                     //Add to cart button
-                    '<a href="movies.php?id=' . $row['movie_id'] . '">' .          
+                    '<a href="php/shopping_cart/add_to_cart.php?id=' . $row['movie_id'] . '">' .          
                     '<p>' . '<button>' . 'Add to Cart' . '</button>' . '</p>' .
                     '</a>' .
                     '</div>' .

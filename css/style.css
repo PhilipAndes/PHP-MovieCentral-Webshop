@@ -3,8 +3,8 @@
 }
 
 body {
-    font-family: 'Kosugi', sans-serif;
-    background-image: url(../img/background_1.jpg);
+    font-family: 'Source Sans Pro', sans-serif;
+    background-image: url(../img/background_2.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -26,17 +26,6 @@ body {
     /* height: 100vh; */
 }
 
-/* FLex menu///////////////////////////////////////////*/
-.flexContainer1 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-}
-
 
 .brandingText { 
     /* display: flex;
@@ -46,11 +35,23 @@ body {
     color: white;
     font-size: 40px;
     text-shadow: 0 0 10px #000;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    /* background-image: url(../img/gif_6.gif); */
+    background-image: url(../img/gif_9.gif);
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    /* border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff; */
+    /* border-bottom: 1px solid #9F2420;
+    border-top: 1px solid #9F2420; */
+    line-height: 1;
     /* margin-top: 30px; */
-    margin: 200px auto;
+    /* margin: 210px auto; */
+    margin: 205px 300px 210px 329px;
+    min-width: 600px;
+    min-height: 250px;
     font-family: "Avengeance Mightiest Avenger";
+    padding: 15px;
 }
 
 /* LOGIN BUTTON ////////////////////////////////////////////////////////////*/
@@ -63,8 +64,8 @@ body {
 
 /* Set a style for all buttons */
 .loginButton button {
-    background-color: #6CC9EA;
-    color: #000;
+    background-color: #9F2420;
+    color: #fff;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -76,11 +77,36 @@ body {
     font-weight: 700;
     font-size: 16px;
     /* border: 1px solid #fff; */
-  }
+}
   
-  .loginButton button:hover {
+.loginButton button:hover {
     color: #fff;
     /* background: ; */
     opacity:1;
-  }
+}
+
+
+/* twinkling stars homepage */
+.twinkling4 {
+    position: absolute;
+    top:0;
+    left:350px;
+    right:100px;
+    width:50%;
+    height:70px;
+    display:block;
+}
+
+.twinkling4 {
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png); 
+    z-index:1;
+
+    -moz-animation:move-twink-back 150s linear infinite;
+    animation:move-twink-back 150s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {background-position: 5000 5000;}
+    to {background-position: -10000px 5000px;}
+}
 

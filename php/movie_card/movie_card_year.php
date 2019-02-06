@@ -11,7 +11,7 @@
         echo '<div class="card debug">' .
              '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="width:100%">' .
              '<h1>' . $row['movie_name']  . '</h1>' .
-             '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' .
+            //  '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' .
              '<h2 class="price">' . 'Year:' . $row['movie_year'] . '</h2>' .
              '<a href="movie_info.php?id=' . $row['movie_id'] . '">' .          
              '<p>' . '<button>' . 'Click For More Info' . '</button>' . '</p>' .

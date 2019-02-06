@@ -22,11 +22,13 @@
 </head>
 <body>
 
+<div class="twinkling4 debug"></div>
+
 <!-- Flex Container -------------------------------------------------------------------------------------->
    
     <div class="flexContainer debug">
         <div class="brandingText debug">
-            <h1>Movie Central</h1>
+            <h1>movie central</h1>
         </div>
     </div>
 
@@ -42,7 +44,7 @@
         <nav class="menu debug">
             <div class="menu-branding debug">
                 <div class="menu-text debug">
-                    <!-- <img src="img/menu_1.jpg" class="menu-image debug"/>  -->
+                    <!-- <img src="img/gif_3.gif" class="menu-image debug"/>  -->
                 </div>
             </div>            
 
@@ -72,7 +74,7 @@
     </header>
 
 <!-- Shopping cart top right------------------------------------------------------------------------------>  
-  <a href="cart.php">
+  <a href="index2.php">
         <div class="icon-cart">
             <div class="cart-line-1" style="background-color: #E5E9EA"></div>
             <div class="cart-line-2" style="background-color: #E5E9EA"></div>
@@ -103,7 +105,7 @@
                     }
 
 
-                    echo '<a href="#">' . 'Shopping Cart' . '</a>' .
+                    echo '<a href="index2.php">' . 'Shopping Cart' . '</a>' .
                         '<a href="logOut.php">' . 'Log Out' . '</a>' .
                         '</div>' .
                         '</div>';
@@ -121,7 +123,8 @@
         <!-- avatar -->
         <form class="modal-content animate debug" action="php/login_form/login_handler2.php" method="POST">
             <div class="imgcontainer debug">
-                <img src="img/avatar_2.png" alt="Avatar" class="avatar">
+                <!-- <img src="img/avatar_2.png" alt="Avatar" class="avatar"> -->
+                <img src="img/gif_1.gif" alt="waiting" title="Sign in!" class="avatar"/>
             </div>
 
             <!-- email and password login -->

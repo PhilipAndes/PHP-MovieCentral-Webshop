@@ -5,14 +5,14 @@
     right: 35px;
     top: 35px;
     cursor: pointer; /* cursor = pointer on menu button */
-    transition: all 0.5s ease-out; 
+    transition: all 0.5s ease-out;
   }
   
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #9F2420;
     transition: all 0.5s ease-out; 
   }
   
@@ -44,6 +44,7 @@
   .menu {
     position: fixed; /*Always show menu */
     top: 0;
+    left: 0;
     width: 100%;
     opacity: 1; /*Menu background opacity, change to see through */
     visibility: hidden; /*Hidden when closed */
@@ -69,11 +70,12 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    /* background: #7BD1EE; */
-    background-image: linear-gradient(to bottom, rgb(1, 79, 112), #7BD1EE, #fff);
+    background: #252A2B;
+    /* background-image: linear-gradient(to bottom, rgb(1, 79, 112), #7BD1EE, #fff); */
     /* background-image: linear-gradient(to right, #fff, #7BD1EE, #3E6B8E); */
     /* background-image: linear-gradient(to right, rgba(0, 0, 0), rgb(255, 255, 255)); */
-    opacity: 0.9;
+    /* opacity: 0.9; */
+    opacity: 1;
     list-style: none;
     transform: translate3d(0, -100%, 0); /*Hide oustide the top screen */
     transition: all 0.5s ease-out; 
@@ -104,10 +106,12 @@
   .menu-branding {
     /* background-image: linear-gradient(to left, rgba(0, 0, 0), rgb(255, 255, 255)); */
     background: #0A78A7;
-    background-image: url(../img/menu_1.jpg);
+    /* background-image: url(../img/menu_1.jpg); */
+    background-image: url(../img/gif_4.gif);
     background-position: center;
     background-size: cover;
-    opacity: 0.9;
+    /* opacity: 0.9; */
+    opacity: 1;
     transform: translate3d(0, 100%, 0); /*Hide outside the bottom screen */
     transition: all 0.5s ease-out; 
   }
@@ -133,6 +137,7 @@
     color: #fff;
     text-decoration: none;
     transition: all 0.5s ease-out; 
+    font-family: "Avengeance Mightiest Avenger";
     /* font-family: "Plane Crash"; */
   }
 
@@ -155,5 +160,5 @@
   
   /*menu link color on hover */
   .menu .nav-link:hover {
-    color: red; 
+    color: #9F2420; 
   }

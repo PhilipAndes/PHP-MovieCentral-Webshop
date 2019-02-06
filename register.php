@@ -46,7 +46,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="movies.php" class="nav-link">
                     <i class="fas fa-desktop"></i>
                     Movies
                     </a>
@@ -95,12 +95,6 @@
                 <label class="fa fa-calendar icon"></label>
                     <input class="input-field" type="date" placeholder="Birthday" name="user_birthday" required>
             </div>
-
-            <!-- Country -->
-            <!-- <div class="input-container">
-                <i class="fa fa-globe icon"></i>
-                    <input class="input-field" type="text" placeholder="Country" name="user_country">
-            </div> -->
 
             <!-- <label class="fa fa-globe icon"></label> -->
             <div class="input-container">

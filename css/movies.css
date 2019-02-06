@@ -18,10 +18,10 @@ body {
 .topBox {
     display: flex;
     flex-wrap: wrap;
-    height: 100px;
+    height: 80px;
     margin: 20px auto;
     flex-direction: column;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgb(255, 255, 255));
+    background-image: linear-gradient(to bottom, #252A2B, rgb(255, 255, 255));
     border-radius: 12px;
 }
 
@@ -35,7 +35,8 @@ body {
     flex: 1;
     font-size: 60px;
     margin-top: 10px;
-    font-family: "Plane Crash";
+    /* font-family: "Plane Crash"; */
+    font-family: "Avengeance Mightiest Avenger";
     align-items: center;
     /* background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255)); */
     /* margin: 5px auto; */
@@ -51,24 +52,26 @@ body {
   }
   
 .card {
-    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
     height: 500px;
     max-width: 300px;
     margin: 15px;
     text-align: center;
     font-family: arial;
     /* background-image: linear-gradient(to bottom, rgb(0, 150, 214), #7BD1EE); */
-    background: #fff;
+    background: #ddd;
     /* background-color: #0069B1; */
     border-radius: 12px;
-    border: 1px solid #fff;
+    /* border: 1px solid #9F2420; */
   }
   
 /* h1 */
 .card h1 {
     color: #000;
-    background-color: #fff;
-    background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255));
+    font-family: "Avengeance Mightiest Avenger";
+    /* text-shadow: 1px 1px #000; */
+    /* background-color: #000; */
+    /* background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255)); */
     margin: 10px 20px 10px 20px;
     border-radius: 12px;
     font-size: 20px;
@@ -78,8 +81,8 @@ body {
 .price {
   color: #fff;
   font-size: 28px;
-  background: #000;
-  margin: 0 50px 0 50px;
+  background: #252A2B;
+  margin: 0 90px 0 90px;
   border-radius: 12px;
 }
   
@@ -89,11 +92,11 @@ body {
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: #000;
-  background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255));
+  background-color: #9F2420;
+  /* background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255)); */
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 70%;
   font-size: 18px;
   border-radius: 12px;
 }
@@ -101,8 +104,9 @@ body {
 /* on hover button */  
 .card button:hover {
   /* opacity: 0.7; */
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: #9F2420;
+  opacity: 0.8;
   font-weight: bold;
 }
   
@@ -129,7 +133,7 @@ body {
   z-index: 1; /* Stay on top */
   top: 130px; /* position from top */
   left: 0;
-  background-color: #111; /* Black */
+  background-color: #252A2B; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   border-radius:0 12px;
@@ -172,6 +176,7 @@ body {
   cursor: pointer;
   transition: 0.3s;
   font-size: 17px;
+  font-family: "Avengeance Mightiest Avenger";
 }
 
 /* Change background color of buttons on hover */
@@ -182,6 +187,7 @@ body {
 /* Create an active/current "tab button" class */
 .tab button.active {
   background-color: #ccc;
+  background-color: #9F2420;
 }
 
 /* Style the tab content */
