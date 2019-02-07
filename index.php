@@ -74,7 +74,7 @@
     </header>
 
 <!-- Shopping cart top right------------------------------------------------------------------------------>  
-  <a href="index2.php">
+  <a href="cart_page.php">
         <div class="icon-cart">
             <div class="cart-line-1" style="background-color: #E5E9EA"></div>
             <div class="cart-line-2" style="background-color: #E5E9EA"></div>
@@ -105,7 +105,7 @@
                     }
 
 
-                    echo '<a href="index2.php">' . 'Shopping Cart' . '</a>' .
+                    echo '<a href="cart_page.php">' . 'Shopping Cart' . '</a>' .
                         '<a href="logOut.php">' . 'Log Out' . '</a>' .
                         '</div>' .
                         '</div>';

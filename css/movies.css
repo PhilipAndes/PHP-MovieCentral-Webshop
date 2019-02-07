@@ -9,7 +9,7 @@
 body {
     font-family: 'Kosugi', sans-serif;
     /* width: 100%; */
-    /* background-image: linear-gradient(to bottom, rgb(0, 150, 214), #7BD1EE); */
+    /* background-image: linear-gradient(to bottom, rgb(0, 150, 214), #7BD1EE); */ 
     /* background: #000; */
     /* background-image: linear-gradient(to right, rgba(0, 0, 0), rgb(255, 255, 255)); */
 }
@@ -133,7 +133,7 @@ body {
   z-index: 1; /* Stay on top */
   top: 130px; /* position from top */
   left: 0;
-  background-color: #252A2B; /* Black */
+  background-color: #252A2B; /* light Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
   border-radius:0 12px;

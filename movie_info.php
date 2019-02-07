@@ -66,17 +66,20 @@
         </nav>
     </header> 
  
- 
+  
 <!-- movie card info ---------------------------------------------------------------------------------------> 
     <div class="cards debug">
         <?php
+            session_start();
             include "php/db_connection.php";
 
             $id = $_GET['id'];
-            // $user_id = $_GET['uid'];                
+
+           //z echo $_SESSION['user_id'];
+                            
 
             $movieInfo = "SELECT * FROM movies WHERE movie_id = '$id'";
-            // $userInfo = "SELECT * FROM users WHERE user_id = '$user_id'";
+            
 
             $db_result = $conn->query($movieInfo); 
             // $db_result = $conn->query($userInfo); 
@@ -86,24 +89,6 @@
                 
                 echo '<div class="card2 debug">' .
                     '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="width:100%">' .
-                    '</div>' .
-                    '<div class="card2 debug">' .
-                    // h1 movie name 
-                    '<h1>' . $row['movie_name']  . '</h1>' .
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Genre: ' . '</span>' . $row['movie_genre'] . '</p>' .
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Actor: ' . '</span>' . $row['movie_actor'] . '</p>' .
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Year: ' . '</span>' . $row['movie_year'] . '</p>' .
-                    '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' .           
-                    '<p class="gameinfo2">' . 'Order now @' . '<p class="gamestop"> MovieCentral</p>' . '</p>' .
-                    //payment methods icons:
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Pay With: ' . '</span>' . '<i class="fab fa-cc-paypal">'. '</i>' . ' ' . '<i class="fab fa-cc-visa"></i>' . '</p>' .
-
-
-
-                    //Add to cart button
-                    '<a href="php/shopping_cart/add_to_cart.php?id=' . $row['movie_id'] . '">' .          
-                    '<p>' . '<button>' . 'Add to Cart' . '</button>' . '</p>' .
-                    '</a>' .
                     '</div>' .
 
                     // game info
@@ -115,6 +100,26 @@
                     //go back button
                     '<a href="movies.php?id=' . $row['movie_id'] . '">' .          
                     '<p>' . '<button>' . 'Back to Movies' . '</button>' . '</p>' .
+                    '</a>' .
+                    '</div>' .
+
+                    '<div class="card2 debug">' .
+                    // h1 movie name 
+                    '<h1>' . $row['movie_name']  . '</h1>' .
+                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Genre: ' . '</span>' . $row['movie_genre'] . '</p>' .
+                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Actor: ' . '</span>' . $row['movie_actor'] . '</p>' .
+                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Year: ' . '</span>' . $row['movie_year'] . '</p>' .           
+                    '<p class="gameinfo2">' . 'Order now @' . '<p class="gamestop"> MovieCentral</p>' . '</p>' .
+                    //payment methods icons:
+                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Pay With: ' . '</span>' . '<i class="fab fa-cc-paypal">'. '</i>' . ' ' . '<i class="fab fa-cc-visa"></i>' . '</p>' .
+
+                    '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' .
+
+
+
+                    //Add to cart button
+                    '<a href="php/shopping_cart/add_to_cart.php?id=' . $row['movie_id'] . '">' .          
+                    '<p>' . '<button>' . 'Add to Cart' . '</button>' . '</p>' .
                     '</a>' .
                     '</div>';
             

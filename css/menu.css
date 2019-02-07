@@ -99,7 +99,8 @@
   
   /*current page link color */
   .menu .nav-item.current > a {
-    color: #000; 
+    color: #983131; 
+    /* text-shadow: 0 0 3px #fff; */
   }
   
   /*Left side menu */

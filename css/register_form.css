@@ -81,3 +81,36 @@ select:focus {
 .btn:hover {
   opacity: 0.8;
 }
+
+/* GIF //////////////////////////////////////*/
+.flexContainer2 {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  /* height: 100vh; */
+}
+
+
+.brandingText2 { 
+  /* display: flex;
+  flex: 1; */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 0 10px #000;
+  background-image: url(../img/pointing_gif.gif);
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  margin: 200px 300px 210px 100px;
+  margin: 205px 300px 210px 329px;
+  min-width: 100px;
+  min-height: 200px;
+  font-family: "Avengeance Mightiest Avenger";
+  padding: 15px;
+}

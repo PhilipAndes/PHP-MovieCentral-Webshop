@@ -35,18 +35,11 @@ body {
     color: white;
     font-size: 40px;
     text-shadow: 0 0 10px #000;
-    /* background-image: url(../img/gif_6.gif); */
-    background-image: url(../img/gif_9.gif);
+    background-image: url(../img/gif_7.gif);
     background-position: center;
     /* background-attachment: fixed; */
     background-size: cover;
-    /* border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff; */
-    /* border-bottom: 1px solid #9F2420;
-    border-top: 1px solid #9F2420; */
     line-height: 1;
-    /* margin-top: 30px; */
-    /* margin: 210px auto; */
     margin: 205px 300px 210px 329px;
     min-width: 600px;
     min-height: 250px;

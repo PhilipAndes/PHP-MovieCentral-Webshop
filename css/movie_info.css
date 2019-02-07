@@ -8,15 +8,16 @@
     }
 
 .card2 {
-    box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
     /* height: 650px; */
-    height: 100%;
+    /* height: 100%; */
+    min-height: 500px;
     max-width: 500px;
     /* max-width: 40%; */
     margin: 15px;
     text-align: center;
     font-family: arial;
-    background-color: #0069B1;
+    background: #ddd;
     border-radius: 12px;
     flex: wrap;
     }
@@ -27,22 +28,24 @@
     font-weight: bold;
     float: left;
     margin-left: 15px;
+    font-family: "Avengeance Mightiest Avenger";
     }
   
 /* h1 */
 .card2 h1 {
       color: #000;
-      background-color: #fff;
+      /* background-color: #fff; */
       margin: 10px 20px 10px 20px;
       border-radius: 12px;
+      font-family: "Avengeance Mightiest Avenger";
   }
   
 /* price */  
 .price {
     color: #fff;
     font-size: 28px;
-    background: #000;
-    margin: 0 50px 0 50px;
+    background: #252A2B;
+    margin: 0 90px 0 90px;
     border-radius: 12px;
   }
   
@@ -52,7 +55,7 @@
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color: #9F2420;
     text-align: center;
     cursor: pointer;
     width: 50%;
@@ -60,34 +63,36 @@
     border-radius: 12px;
   }
   
-/* on hover button */  
+/* on hover button */   
 .card2 button:hover {
-    /* opacity: 0.7; */
-    color: #000;
-    background-color: #fff;
-    /* font-weight: bold; */
+    background-color: #9F2420;
+    opacity: 0.8;
+    font-weight: bold;
   }
   
 /* card info image */
 .card2 img {
-      width: 100%;
+      /* width: 100%; */
       /* height: 650px; */
-      height: 100%;
+      /* height: 100%; */
+      min-height: 500px;
+      max-height: 500px;
+      max-width: 350px;  
       border-radius: 12px;
   }
   
 /* gamestop text on cards */
 .card2 .gamestop {
-    color: red;
-    text-shadow: 0 0 5px #000;
+    color: #9F2420;
     letter-spacing: 2px;
     font-size: 30px;
     font-weight: bold;
+    font-family: "Avengeance Mightiest Avenger";
   }
   
 /* gameinfo text */
 .gameinfo2 {
-    color: #fff;
+    color: #000;
     font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;

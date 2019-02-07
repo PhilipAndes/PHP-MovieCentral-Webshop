@@ -1,12 +1,16 @@
 <?php
-    // $firstname = $_POST['user_firstname'];
-    $id_movie = $_GET["id"];    
+
+    session_start();
+    
+    $id_movie = $_GET["id"];   
+    
+    $user_id = $_SESSION['user_id'];
 
     include "../db_connection.php";
 
     try {
             $sql = "INSERT INTO cart (movie_id, user_id)
-            VALUES ('$id_movie', 3)";
+            VALUES ('$id_movie', '$user_id')";
             
             // use exec() because no results are returned
             $conn->exec($sql);
@@ -21,10 +25,7 @@
 
     $conn = null;
 
-    // header("location:../../movie_info.php?id=' . '$row['movie_id']'");
-
-
-    
+    header('location:../../movie_info.php?id=' .  $id_movie);   
 
 ?>
 

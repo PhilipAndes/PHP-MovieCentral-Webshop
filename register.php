@@ -61,8 +61,13 @@
         </nav>
     </header>
 
+<!-- register form gif ----------------------------------------------------------------------------------->
+    <!-- <div class="flexContainer2 debug">
+        <div class="brandingText2 debug">
+        </div>
+    </div>     -->
 
-    
+<!-- Register form --------------------------------------------------------------------------------------->    
     <form class="register-form" action="php/register_form/register_handler.php" method="POST">
         <h2>Register</h2>
 
