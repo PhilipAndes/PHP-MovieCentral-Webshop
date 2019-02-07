@@ -22,8 +22,12 @@
         echo "<br>";
         echo $row['movie_price'];
         echo "<br>";
-        echo $row['movie_img'];
+        echo '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="max-width:50px" "max-height:50px" >';
         echo "<br>";
+        //Delete from cart button
+        echo '<a href="php/shopping_cart/delete_from_cart.php?id=' . $row['movie_id'] . '">' .          
+        '<p>' . '<button>' . 'Delete' . '</button>' . '</p>' .
+        '</a>';
        
     }       
 

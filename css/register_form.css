@@ -82,6 +82,25 @@ select:focus {
   opacity: 0.8;
 }
 
+/* ADD MOVIE PAGE //////////////////////////////*/
+.register-form p {
+  color: #9F2420;
+  font-family: "Avengeance Mightiest Avenger";
+  margin-bottom: 1px;
+  margin-top: 10px;
+  
+}
+
+#addGif {
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/gif_12.gif);
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+
+
 /* GIF //////////////////////////////////////*/
 .flexContainer2 {
   display: flex;

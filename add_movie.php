@@ -12,11 +12,11 @@
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <!-- movie cards info css -->
-        <link rel="stylesheet" type="text/css" href="css/movie_info.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/register_form.css">
     <title>Add Movie</title>
 </head>
-<body>
+<body id="addGif">
 
 <!-- top box --------------------------------------------------------------------------------------------->
     <div class="topBox debug">
@@ -67,29 +67,39 @@
     </header>
 
 <!-- add movie -------------------------------------------------------------------------------------------->
-
-    <form action="php/add_movie/add_movie_handler.php" method="POST" enctype="multipart/form-data"> 
-        Movie Name: <input type="text" name="name" required><br>
-        <!-- dropdown genre --> 
-        Movie Genre: <select name="genre" required>              
+    <form class="register-form" action="php/add_movie/add_movie_handler.php" method="POST" enctype="multipart/form-data">
+        <p>Movie Name:</p> 
+            <input class="input-field" type="text" placeholder="Name" name="name" autofocus required><br>
+        <!-- dropdown genre -->
+        <p>Movie Genre:</p>
+            <div class="input-container"> 
+                <select name="Genre" required>
+                    <optgroup label="Genre">             
                         <option value="action">Action</option>
                         <option value="horror">Horror</option>               
                         <option value="comedy">Comedy</option>
-                        <option value="scifi">Science Fiction</option>               
-                    </select><br>
+                        <option value="scifi">Science Fiction</option>
+                    </optgroup>               
+                </select>
+            </div>
         <!-- end dropdown -->
-        Movie Actor:<input type="text" name="actor" required><br> 
-        Movie Year:<input type="year" name="year" required><br>
-        Movie Price:<input type="text" name="price" required><br>
-        Movie Info:<input type="text" name="info" required><br>
+        <p>Movie Actor:</p>
+            <input class="input-field" type="text" placeholder="Actor" name="actor" required><br> 
+        <p>Movie Year:</p>
+            <input class="input-field" type="year" placeholder="Year" name="year" required><br>
+        <p>Movie Price:</p>
+            <input class="input-field" type="text" placeholder="Price" name="price" required><br>
+        <p>Movie Info:</p>
+            <input class="input-field" type="text" placeholder="About Movie" name="info" required><br>
         <!-- add image -->
         <!-- Select image:<input type="file" name="image"><br> -->
 
         <!-- Movie Image:<input type="file" name="photo" required><br> -->
 
-        <input type="submit" value="Add Movie">
+        <button type="submit" value="Add Movie" class="btn">Add Movie</button>
         <button type="reset" value="Reset" class="btn">Reset</button>   
     </form>
+<!-- </div> -->
 
 <!-- JavaScript ------------------------------------------------------------------------------------------->
     <!-- js menu button -->

@@ -9,11 +9,8 @@
 
 .card2 {
     box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
-    /* height: 650px; */
-    /* height: 100%; */
     min-height: 500px;
     max-width: 500px;
-    /* max-width: 40%; */
     margin: 15px;
     text-align: center;
     font-family: arial;
@@ -97,3 +94,39 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
+/* PERSONAL PAGE ////////////////////////////////////////////*/
+
+.card3 {
+    box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
+    /* height: 650px; */
+    /* height: 100%; */
+    min-height: 200px;
+    min-width: 400px;
+    max-width: 800px;
+    /* max-width: 40%; */
+    margin-top: 100px;
+    text-align: center;
+    font-family: arial;
+    background: #ddd;
+    border-radius: 12px;
+    flex: wrap;
+    }
+ 
+/* h1 */
+.card3 h1 {
+      color: #9F2420;
+      /* background-color: #fff; */
+      margin: 10px 20px 10px 20px;
+      border-radius: 12px;
+      font-family: "Avengeance Mightiest Avenger";
+  }
+
+  .gameinfo4 {
+    color: #000;
+    font-size: 20px;
+    padding: 10px;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+    font-family: "Avengeance Mightiest Avenger";
+  }  

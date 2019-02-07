@@ -20,7 +20,7 @@
 <!-- top box --------------------------------------------------------------------------------------------->
     <div class="topBox debug">
         <div class="topBoxText debug">
-            <h1>My Cart</h1>
+            <h1>my cart</h1>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
             <div class="menu-branding debug">
                 <div class="menu-text debug">
                     <!-- <img src="img/menu_1.jpg" class="menu-image debug"/>  -->
-                </div>
+                </div> 
             </div>            
 
             <!-- Menu links-->
