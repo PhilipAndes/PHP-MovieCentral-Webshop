@@ -18,13 +18,13 @@ body {
 
 /* body background register page ///////////////////////////////////////*/
 #registerBG {
-    background-image: url(../img/gif_3.gif);
+    background-image: url(../img/background_4.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
 }
 
-/* body background personal info page ///////////////////////////////////////*/
+/* body background personal info page ///////////////////////////////////////*/ 
 #personalBG {
     background-image: url(../img/gif_17.gif);
     background-position: center left;
@@ -38,7 +38,11 @@ body {
 
 /* body background register page ///////////////////////////////////////*/
 #contactBG {
-    background: #fff;
+    /* background: #fff; */
+    background-image: url(../img/background_3.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 /* body background movies page ///////////////////////////////////////*/
