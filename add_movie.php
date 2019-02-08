@@ -12,14 +12,16 @@
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-
+    <!-- overal  css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    
     <link rel="stylesheet" type="text/css" href="css/register_form.css">
     <title>Add Movie</title>
 </head>
 <body id="addGif">
 
 <!-- top box --------------------------------------------------------------------------------------------->
-    <div class="topBox debug">
+    <div class="topBox2 debug">
         <div class="topBoxText debug">
             <h1>add movie</h1>
         </div>

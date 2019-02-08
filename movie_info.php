@@ -1,5 +1,14 @@
+<?php
+
+    if(isset($_GET['s'])){
+        // echo "<h1> Movie Added </h1>";
+        echo '<script>alert("Movie Added To Cart! ")</script>';
+    }
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +23,13 @@
     <link rel="stylesheet" type="text/css" href="css/movie_info.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <!-- shopping cart css: -->
+    <link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
+    <!-- overal  css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Movies</title>
 </head>
-<body>
+<body id="movieinfoBG">
 
 <!-- top box --------------------------------------------------------------------------------------------->
     <div class="topBox debug">
@@ -64,7 +77,17 @@
                 </li>
             </ul>
         </nav>
-    </header> 
+    </header>
+    
+<!-- Shopping cart top left------------------------------------------------------------------------------>  
+<a href="cart_page.php">
+        <div class="icon-cart"> 
+            <div class="cart-line-1" style="background-color: #E5E9EA"></div>
+            <div class="cart-line-2" style="background-color: #E5E9EA"></div>
+            <div class="cart-line-3" style="background-color: #E5E9EA"></div>
+            <div class="cart-wheel" style="background-color: #E5E9EA"></div>
+        </div>
+    </a>
  
   
 <!-- movie card info ---------------------------------------------------------------------------------------> 
@@ -93,7 +116,7 @@
 
                     // game info
                     '<div class="card2 debug">' .
-                    '<h1>' . 'About The Movie:' . '</h1>' .
+                    '<h1 id="movieinfoHeader1">' . 'About The Movie:' . '</h1>' .
                     '<p class="gameinfo2">' . $row['movie_info'] . '</p>' .
 
 
@@ -102,16 +125,17 @@
                     '<p>' . '<button>' . 'Back to Movies' . '</button>' . '</p>' .
                     '</a>' .
                     '</div>' .
-
+ 
                     '<div class="card2 debug">' .
                     // h1 movie name 
-                    '<h1>' . $row['movie_name']  . '</h1>' .
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Genre: ' . '</span>' . $row['movie_genre'] . '</p>' .
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Actor: ' . '</span>' . $row['movie_actor'] . '</p>' .
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Year: ' . '</span>' . $row['movie_year'] . '</p>' .           
-                    '<p class="gameinfo2">' . 'Order now @' . '<p class="gamestop"> MovieCentral</p>' . '</p>' .
+                    '<h1 id="movieinfoHeader2">' . $row['movie_name']  . '</h1>' .
+                    '<p class="gameinfo1">' . '<span class="gameinfo3">' . 'Genre: ' . '</span>' . $row['movie_genre'] . '</p>' .
+                    '<p class="gameinfo1">' . '<span class="gameinfo3">' . 'Actor: ' . '</span>' . $row['movie_actor'] . '</p>' .
+                    '<p class="gameinfo1">' . '<span class="gameinfo3">' . 'Year: ' . '</span>' . $row['movie_year'] . '</p>' .           
+                    '<p class="gameinfo2">' . '<span class="orderNow">' . 'Order now @' . '<p class="gamestop"> MovieCentral</p>' . '</p>' .
+                    
                     //payment methods icons:
-                    '<p class="gameinfo2">' . '<span class="gameinfo3">' . 'Pay With: ' . '</span>' . '<i class="fab fa-cc-paypal">'. '</i>' . ' ' . '<i class="fab fa-cc-visa"></i>' . '</p>' .
+                    '<p class="payIcons">' . '<span class="gameinfo3">' . 'Pay With: ' . '</span>' . '<i class="fab fa-cc-paypal">'. '</i>' . ' ' . '<i class="fab fa-cc-visa"></i>' . '</p>' .
 
                     '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' .
 

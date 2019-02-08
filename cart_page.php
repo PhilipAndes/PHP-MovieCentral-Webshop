@@ -12,10 +12,12 @@
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <!-- overal  css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
     <title>My Cart</title>
 </head>
-<body>
+<body id="cartBG"> 
 
 <!-- top box --------------------------------------------------------------------------------------------->
     <div class="topBox debug">
@@ -63,11 +65,12 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </header> 
 
 <!-- cart -------------------------------------------------------------------------------------------->
-<?php include "shopping_cart.php" ?>
-
+    <div class="cards debug">
+        <?php include "shopping_cart.php" ?>
+    </div>
 <!-- JavaScript ------------------------------------------------------------------------------------------->
     <!-- js menu button -->
     <script src="js/menu.js"></script>

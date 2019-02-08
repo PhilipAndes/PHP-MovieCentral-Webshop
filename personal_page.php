@@ -12,11 +12,13 @@
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-        <!-- movie cards info css -->
-        <link rel="stylesheet" type="text/css" href="css/movie_info.css"/>
+    <!-- movie cards info css -->
+    <link rel="stylesheet" type="text/css" href="css/movie_info.css"/>
+    <!-- overal  css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Personal Page</title>
 </head>
-<body>
+<body id="personalBG">
 
 <!-- top box --------------------------------------------------------------------------------------------->
     <div class="topBox debug">

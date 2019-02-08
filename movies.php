@@ -12,9 +12,11 @@
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <!-- overal  css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <title>Movies</title>
 </head>
-<body>
+<body id="moviesBG">
 
 <!-- top box --------------------------------------------------------------------------------------------->
     <div class="topBox debug">
@@ -74,13 +76,13 @@
                 <button class="tablinks" onclick="openMovie(event, 'Comedy')">Comedy</button>
                 <button class="tablinks" onclick="openMovie(event, 'Scifi')">Sci-Fi</button>
         </div>
-
+<br>
         <div class="tab">  
-            <button class="tablinks" onclick="openMovie(event, 'moviePrice')" id="defaultOpen">Price Low High</button>
-        </div>
-
+            <button class="tablinks" onclick="openMovie(event, 'moviePrice')" id="defaultOpen">Price Low to High</button>
+        </div> 
+<br>
         <div class="tab">  
-            <button class="tablinks" onclick="openMovie(event, 'movieYear')" id="defaultOpen">Year New Old</button>
+            <button class="tablinks" onclick="openMovie(event, 'movieYear')" id="defaultOpen">Year New to Old</button>
         </div>
 
     </div>

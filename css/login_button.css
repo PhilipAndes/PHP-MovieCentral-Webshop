@@ -1,3 +1,34 @@
+/* LOGIN BUTTON ////////////////////////////////////////////////////////////*/
+.loginButton {
+    position: absolute;
+    left: 35px;
+    top: 20px;
+    cursor: pointer; /* cursor = pointer on menu button */
+}
+
+/* Set a style for all buttons */
+.loginButton button {
+    background-color: #9F2420;
+    color: #fff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 12px;
+    font-family: 'Kosugi', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    /* border: 1px solid #fff; */
+}
+  
+.loginButton button:hover {
+    color: #fff;
+    /* background: ; */
+    opacity:1;
+}
+
 
 /* Full-width input fields */
 input[type=email], input[type=password] {

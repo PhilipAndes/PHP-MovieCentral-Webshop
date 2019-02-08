@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+/* .debug {
+    border: 1px solid red;
+} */
+
+
+/* body background home page ///////////////////////////////////////*/
 body {
     font-family: 'Source Sans Pro', sans-serif;
     background-image: url(../img/background_2.jpg);
@@ -10,9 +16,41 @@ body {
     background-size: cover;
 }
 
-/* .debug {
-    border: 1px solid red;
-} */
+/* body background register page ///////////////////////////////////////*/
+#registerBG {
+    background-image: url(../img/gif_3.gif);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* body background personal info page ///////////////////////////////////////*/
+#personalBG {
+    background-image: url(../img/gif_17.gif);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-position-x: -450px;
+    background-position-y: -200px;
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+    /* background: #fff; */
+}
+
+/* body background movies page ///////////////////////////////////////*/
+#moviesBG {
+    background: #fff;
+}
+
+/* body background movie info page ///////////////////////////////////////*/
+#movieinfoBG {
+    background: #fff;
+}
+
+/* body background movie info page ///////////////////////////////////////*/
+#cartBG {
+    background: #fff;
+}
+
 
 /* FLex box ///////////////////////////////////////////*/
 .flexContainer {
@@ -26,7 +64,7 @@ body {
     /* height: 100vh; */
 }
 
-
+/* branding text homepage */
 .brandingText { 
     /* display: flex;
     flex: 1; */
@@ -35,49 +73,37 @@ body {
     color: white;
     font-size: 40px;
     text-shadow: 0 0 10px #000;
-    background-image: url(../img/gif_7.gif);
+    background-image: url(../img/gif_9.gif);
     background-position: center;
     /* background-attachment: fixed; */
     background-size: cover;
     line-height: 1;
-    margin: 205px 300px 210px 329px;
-    min-width: 600px;
+    /* margin: 205px 300px 210px 329px; */
+    margin: -25px 300px 210px 329px;
+    min-width: 640px;
     min-height: 250px;
     font-family: "Avengeance Mightiest Avenger";
     padding: 15px;
 }
 
-/* LOGIN BUTTON ////////////////////////////////////////////////////////////*/
-.loginButton {
-    position: absolute;
-    left: 35px;
-    top: 20px;
-    cursor: pointer; /* cursor = pointer on menu button */
+/* branding text homepage */
+.brandingText2 { 
+    /* display: flex;
+    flex: 1; */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    text-shadow: 0 0 10px #000;
+    /* line-height: 1; */
+    min-width: 600px;
+    margin-top: 40px;
+    margin-left: 20px;
+    /* margin-bottom: 0px; */
+    /* min-height: 250px; */
+    font-family: "Avengeance Mightiest Avenger";
+    /* padding: 15px; */
 }
-
-/* Set a style for all buttons */
-.loginButton button {
-    background-color: #9F2420;
-    color: #fff;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-    border-radius: 12px;
-    font-family: 'Kosugi', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    /* border: 1px solid #fff; */
-}
-  
-.loginButton button:hover {
-    color: #fff;
-    /* background: ; */
-    opacity:1;
-}
-
 
 /* twinkling stars homepage */
 .twinkling4 {
@@ -101,5 +127,48 @@ body {
 @keyframes move-twink-back {
     from {background-position: 5000 5000;}
     to {background-position: -10000px 5000px;}
+}
+
+/* top box global//////////////////////////////////////////////////*/
+.topBox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 60px;
+    /* margin: 20px auto; */
+    margin-top: 20px;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #252A2B, rgb(255, 255, 255));
+    border-radius: 12px;
+}
+
+/* top box ADD TO MOVIE PAGE //////////////////////////////////////////////////*/
+.topBox2 {
+  display: flex; 
+  flex-wrap: wrap;
+  height: 60px;
+  margin-top: 20px;
+  flex-direction: column;
+  /* background: #ddd; */
+  background-image: linear-gradient(to bottom, #252A2B, rgb(255, 255, 255));
+  /* background-image: linear-gradient(to bottom, #252A2B, rgb(255, 255, 255)); */
+  border-radius: 12px;
+  text-shadow: 0px 0px 15px #fff;
+  /* color: white; */
+}
+
+.topBoxText {
+    display: flex;
+    justify-content: center;
+    /* margin: 30px; */
+    height: 80px;
+    flex-direction: row;
+    flex: 1;
+    font-size: 50px;
+    margin-top: 10px;
+    /* font-family: "Plane Crash"; */
+    font-family: "Avengeance Mightiest Avenger";
+    align-items: center;
+    /* background-image: linear-gradient(to bottom, rgba(0, 14, 20, 0.8), rgb(255, 255, 255)); */
+    /* margin: 5px auto; */
 }
 

@@ -15,20 +15,14 @@
 
     foreach ($db_result as $row)
     {            
-        
-        echo $row['movie_id'];
-        echo "<br>";
-        echo $row['movie_name'];
-        echo "<br>";
-        echo $row['movie_price'];
-        echo "<br>";
-        echo '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="max-width:50px" "max-height:50px" >';
-        echo "<br>";
-        //Delete from cart button
-        echo '<a href="php/shopping_cart/delete_from_cart.php?id=' . $row['movie_id'] . '">' .          
+        echo '<div class="cardCart debug">' .
+        '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="width:100%" >' .
+        '<h1>' . $row['movie_name']  . '</h1>' .
+        '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' .
+        '<a href="php/shopping_cart/delete_from_cart.php?id=' . $row['movie_id'] . '">' .          
         '<p>' . '<button>' . 'Delete' . '</button>' . '</p>' .
-        '</a>';
-       
+        '</a>' .
+        '</div>';
     }       
 
     $conn = null;

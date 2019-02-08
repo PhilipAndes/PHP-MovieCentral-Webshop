@@ -19,7 +19,7 @@
     <!-- login button css: -->
     <link rel="stylesheet" type="text/css" href="css/login_button.css">
     <title>Welcome</title>
-</head>
+</head> 
 <body>
 
 <div class="twinkling4 debug"></div>
@@ -27,8 +27,11 @@
 <!-- Flex Container -------------------------------------------------------------------------------------->
    
     <div class="flexContainer debug">
-        <div class="brandingText debug">
+        <div class="brandingText2 debug">
             <h1>movie central</h1>
+        </div>
+        <div class="brandingText debug">
+            <h1></h1>
         </div>
     </div>
 
@@ -73,7 +76,7 @@
         </nav>
     </header>
 
-<!-- Shopping cart top right------------------------------------------------------------------------------>  
+<!-- Shopping cart top left------------------------------------------------------------------------------>  
   <a href="cart_page.php">
         <div class="icon-cart">
             <div class="cart-line-1" style="background-color: #E5E9EA"></div>
@@ -148,7 +151,7 @@
             
                 <!-- Cancel button and forgot password? -->
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn debug">Cancel</button>
-                    <span class="psw debug">Forgot <a href="#">password?</a></span>
+                    <!-- <span class="psw debug">Forgot <a href="#">password?</a></span> -->
             </div>
         </form>
     </div>

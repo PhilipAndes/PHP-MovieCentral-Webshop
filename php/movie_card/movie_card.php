@@ -8,15 +8,14 @@
     foreach ($db_result as $row)
     {            
         
-        echo '<div class="card debug">' .
-             '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="width:100%">' .
-             '<h1>' . $row['movie_name']  . '</h1>' .
-             '<h2 class="price">' . '€' . $row['movie_price'] . ',-' . '</h2>' . 
-             '<a href="movie_info.php?id=' . $row['movie_id'] . '">' .          
-             '<p>' . '<button>' . 'Click For More Info' . '</button>' . '</p>' .
-             '</a>' .
-             '</div>';
-       
+        echo '<div class="card container debug">' .  
+            '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . '"class="image"'  . '" style="width:100%">' .
+             
+             '<div class="middle">' .
+             '<a href="movie_info.php?id=' . $row['movie_id'] . '">' .
+             '<div class="text">' . 'Buy Now!' . '</div>' . '</a>' . 
+             '</div>' . 
+            '</div>';
     }       
 
     $conn = null;

@@ -25,7 +25,7 @@
 
     $conn = null;
 
-    header('location:../../movie_info.php?id=' .  $id_movie);   
+    header('location:../../movie_info.php?id=' .  $id_movie . '&s=1');   
 
 ?>
 

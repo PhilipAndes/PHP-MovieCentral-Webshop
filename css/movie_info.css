@@ -6,19 +6,23 @@
     justify-content: center;
     align-items: center;
     }
-
+ 
 .card2 {
     box-shadow: 10px 10px 10px 2px rgba(0, 0, 0, 0.2);
     min-height: 500px;
+    max-height: 500px;
+    min-width: 350px;
     max-width: 500px;
     margin: 15px;
+    margin-top: 30px;
     text-align: center;
-    font-family: arial;
+    font-family: 'Calibri';
     background: #ddd;
     border-radius: 12px;
     flex: wrap;
     }
 
+/* info card rubric text */   
 .gameinfo3 {
     color: #000;
     font-size: 25px;
@@ -78,11 +82,20 @@
       border-radius: 12px;
   }
   
-/* gamestop text on cards */
+/* moviecentral text on cards */
 .card2 .gamestop {
+    margin: -10px;
     color: #9F2420;
     letter-spacing: 2px;
     font-size: 30px;
+    font-weight: bold;
+    font-family: "Avengeance Mightiest Avenger";
+  }
+
+/* ordernow text on cards */
+.card2 .orderNow {
+    color: #9F2420;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Avengeance Mightiest Avenger";
   }
@@ -91,6 +104,22 @@
 .gameinfo2 {
     color: #000;
     font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+/* gameinfo text */
+.gameinfo1 {
+    color: #000;
+    font-size: 20px;
+    margin-left: 10px;
+    /* margin-right: 10px; */
+  }
+
+/* gameinfo text */
+.payIcons {
+    color: #2790C3;
+    font-size: 40px;
     margin-left: 10px;
     margin-right: 10px;
   }

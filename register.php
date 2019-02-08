@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <title>Login-form</title>
 </head>
-<body>
+<body id="registerBG">
 
 <!-- Menu button top right-------------------------------------------------------------------------------->
     <header>
@@ -62,10 +62,10 @@
     </header>
 
 <!-- register form gif ----------------------------------------------------------------------------------->
-    <!-- <div class="flexContainer2 debug">
+    <div class="flexContainer2 debug">
         <div class="brandingText2 debug">
         </div>
-    </div>     -->
+    </div>    
 
 <!-- Register form --------------------------------------------------------------------------------------->    
     <form class="register-form" action="php/register_form/register_handler.php" method="POST">
@@ -100,7 +100,7 @@
                 <label class="fa fa-calendar icon"></label>
                     <input class="input-field" type="date" placeholder="Birthday" name="user_birthday" required>
             </div>
-
+ 
             <!-- <label class="fa fa-globe icon"></label> -->
             <div class="input-container">
                 <label class="fa fa-globe icon"></label>
