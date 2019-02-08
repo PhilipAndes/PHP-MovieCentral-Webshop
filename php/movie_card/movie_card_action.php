@@ -12,7 +12,7 @@
              
             '<div class="middle">' .
             '<a href="movie_info.php?id=' . $row['movie_id'] . '">' .
-            '<div class="text">' . 'Buy Now!' . '</div>' . '</a>' . 
+            '<div class="text">' . 'View Movie' . '</div>' . '</a>' . 
             '</div>' . 
             '</div>';
        
