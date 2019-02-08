@@ -36,6 +36,11 @@ body {
     /* background: #fff; */
 }
 
+/* body background register page ///////////////////////////////////////*/
+#contactBG {
+    background: #fff;
+}
+
 /* body background movies page ///////////////////////////////////////*/
 #moviesBG {
     background: #fff;
@@ -138,6 +143,7 @@ body {
     margin-top: 20px;
     flex-direction: column;
     background-image: linear-gradient(to bottom, #252A2B, rgb(255, 255, 255));
+    /* background-image: linear-gradient(to bottom, #9F2420, rgb(255, 255, 255)); */
     border-radius: 12px;
 }
 

@@ -52,7 +52,7 @@
                     </a>
 
                 <li class="nav-item debug">
-                    <a href="#" class="nav-link debug">
+                    <a href="contact.php" class="nav-link debug">
                     <i class="fa fa-fw fa-envelope"></i>
                     Contact 
                     </a>

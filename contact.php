@@ -12,17 +12,20 @@
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
     <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <!-- movie cards info css -->
+    <link rel="stylesheet" type="text/css" href="css/movie_info.css"/>
     <!-- overal  css -->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-
-    <title>My Cart</title>
+    <!-- icons  css -->
+    <link rel="stylesheet" type="text/css" href="css/contact_icons.css"/>
+    <title>Contact me</title>
 </head>
-<body id="cartBG"> 
+<body id="contactBG">
 
 <!-- top box --------------------------------------------------------------------------------------------->
     <div class="topBox debug">
         <div class="topBoxText debug">
-            <h1>my cart</h1>
+            <h1> Contact me</h1>
         </div>
     </div>
 
@@ -39,7 +42,7 @@
             <div class="menu-branding debug">
                 <div class="menu-text debug">
                     <!-- <img src="img/menu_1.jpg" class="menu-image debug"/>  -->
-                </div> 
+                </div>
             </div>            
 
             <!-- Menu links-->
@@ -57,7 +60,7 @@
                     Movies
                     </a>
 
-                <li class="nav-item debug">
+                <li class="nav-item current debug">
                     <a href="contact.php" class="nav-link debug">
                     <i class="fa fa-fw fa-envelope"></i>
                     Contact 
@@ -65,16 +68,37 @@
                 </li>
             </ul>
         </nav>
-    </header> 
+    </header>
 
-<!-- cart -------------------------------------------------------------------------------------------->
+<!-- personal info ---------------------------------------------------------------------------------------> 
     <div class="cards debug">
-        <?php include "shopping_cart.php" ?>
-    </div>
+        <div class="card3 debug">' .
+            <h1>Philip Andes</h1>
+            <p class="gameinfo4"><span class="gameinfo3">find me on social media:</span></p>
+                <div class="icons">
+                    <a href="https://twitter.com/19Dbz88" target="_blank" title="twitter">
+                    <i class="fab fa-twitter fa-2x"></i> 
+                    </a>
+                    <a href="https://www.facebook.com/philip.andes" target="_blank" title="facebook">
+                    <i class="fab fa-facebook fa-2x"></i> 
+                    </a>
+                    <a href="https://www.linkedin.com/in/philip-andes-054a31102/" target="_blank" title="linkedin">
+                    <i class="fab fa-linkedin fa-2x"></i> 
+                    </a>
+                    <a href="https://github.com/PhilipAndes" target="_blank" title="github">
+                    <i class="fab fa-github fa-2x"></i> 
+                    </a>
+                </div>
+        </div>
+    </div>  
+
+
 <!-- JavaScript ------------------------------------------------------------------------------------------->
     <!-- js menu button -->
     <script src="js/menu.js"></script>
 
+    <!-- js sidebar -->
+    <script src="js/movie_filter_genre.js"></script>
     
 
 </body>

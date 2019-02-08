@@ -14,6 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <!-- overal  css -->
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <!-- shopping cart css: -->
+    <link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
     <title>Movies</title>
 </head>
 <body id="moviesBG">
@@ -57,7 +59,7 @@
                     </a>
 
                 <li class="nav-item debug">
-                    <a href="#" class="nav-link debug">
+                    <a href="contact.php" class="nav-link debug">
                     <i class="fa fa-fw fa-envelope"></i>
                     Contact 
                     </a>
@@ -65,6 +67,16 @@
             </ul>
         </nav>
     </header>
+
+<!-- Shopping cart top left------------------------------------------------------------------------------>  
+    <a href="cart_page.php" title="open cart">
+        <div class="icon-cart">
+            <div class="cart-line-1" style="background-color: #E5E9EA"></div>
+            <div class="cart-line-2" style="background-color: #E5E9EA"></div>
+            <div class="cart-line-3" style="background-color: #E5E9EA"></div>
+            <div class="cart-wheel" style="background-color: #E5E9EA"></div>
+        </div>
+    </a>    
 
 <!-- Side navigation !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <div class="sidenav">

@@ -67,7 +67,7 @@
                     </a>
 
                 <li class="nav-item debug">
-                    <a href="#" class="nav-link debug">
+                    <a href="contact.php" class="nav-link debug">
                     <i class="fa fa-fw fa-envelope"></i> 
                     Contact
                     </a>
@@ -77,7 +77,7 @@
     </header>
 
 <!-- Shopping cart top left------------------------------------------------------------------------------>  
-  <a href="cart_page.php">
+  <a href="cart_page.php" title="open cart">
         <div class="icon-cart">
             <div class="cart-line-1" style="background-color: #E5E9EA"></div>
             <div class="cart-line-2" style="background-color: #E5E9EA"></div>
@@ -104,7 +104,6 @@
 
                     if ($_SESSION['user_type'] == 'Admin') {
                         echo '<a href="add_movie.php">' . 'Add Movie' . '</a>';
-                        // echo '<script>alert("Welcome Admin! ")</script>';
                     }
 
 

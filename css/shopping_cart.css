@@ -3,8 +3,8 @@
     height: 48px;
     position: absolute;
     overflow: hidden;
-    left: 150px;
-    top: 25px;
+    right: 80px;
+    top: 20px;
     cursor: pointer; /* cursor = pointer on menu button */
     /* margin-left: 25px;
     margin-bottom: 25px; */

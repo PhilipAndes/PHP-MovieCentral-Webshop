@@ -17,9 +17,9 @@
     width: 100%;
     opacity: 0.9;
     border-radius: 12px;
-    font-family: 'Kosugi', sans-serif;
     font-weight: 700;
     font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
     /* border: 1px solid #fff; */
 }
   
@@ -173,6 +173,7 @@ span.psw {
     min-width: 160px;
     /* box-shadow: 8px 8px 16px 0px rgba(255, 255, 255, 0.8); */
     z-index: 999;
+    font-family: "Avengeance Mightiest Avenger";
 }
 
 /*links inside the dropdown */
@@ -185,8 +186,9 @@ span.psw {
 
 /*change color of dropdown links on hover */
 .dropDownContent a:hover {
-    background-color: #ddd;
-    border-radius: 12px;
+    background-color: #9F2420;
+    color: #fff;
+    border-radius: 6px;
 }
 
 /*show the dropdown menu on hover */
