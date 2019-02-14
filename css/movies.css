@@ -267,7 +267,7 @@ body {
     text-align: center;
 }
 
-.middle a {
+.middle a { 
   text-decoration: none;
 }
 
@@ -285,4 +285,30 @@ body {
     font-size: 16px;
     padding: 16px 32px;
     border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 90px;
+    }
+
+    .tab {
+        width: 80px;
+    }
+
+    .tab button {
+        font-size: 12px;
+        padding: 12px 8px;
+    }
+
+    .card {
+        width: 100%;
+        height: 300px;
+        margin: 40px 0 0 0 ;
+    }
+
+    .main {
+        margin-left: 95px; /* Same as the width of the sidebar */
+        /* padding: 0px 10px; */
+    }
 }

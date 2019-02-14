@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     <!-- movie cards css -->
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- movie cards info css -->
@@ -112,10 +114,11 @@
                 
                 echo '<div class="card2 debug">' .
                     '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . $row['movie_name'] . '" style="width:100%">' .
+                    // '<img src="/img/' . $row['movie_img'] . '" alt="' . '"class="image"'  . '" style="width:100%">' .
                     '</div>' .
 
                     // game info
-                    '<div class="card2 debug">' .
+                    '<div class="card2 cardResponsive debug">' .
                     '<h1 id="movieinfoHeader1">' . 'About The Movie:' . '</h1>' .
                     '<p class="gameinfo2">' . $row['movie_info'] . '</p>' .
 

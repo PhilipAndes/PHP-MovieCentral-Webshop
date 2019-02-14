@@ -9,7 +9,7 @@
     <!-- Load an icon library -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     <!-- overal style -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- menu css: -->

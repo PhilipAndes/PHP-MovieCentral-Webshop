@@ -9,6 +9,7 @@
     {            
         echo '<div class="card container debug">' .  
             '<img src="/codegorilla/MovieCentral/img/' . $row['movie_img'] . '" alt="' . '"class="image"'  . '" style="width:100%">' .
+            // '<img src="/img/' . $row['movie_img'] . '" alt="' . '"class="image"'  . '" style="width:100%">' .
              
             '<div class="middle">' .
             '<a href="movie_info.php?id=' . $row['movie_id'] . '">' .

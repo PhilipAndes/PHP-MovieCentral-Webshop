@@ -12,18 +12,18 @@
     // echo "<br>";
     // echo $_GET["user_country"]; 
 
-    echo "<br>";
-    echo $_POST["user_firstname"]; 
-    echo "<br>";
-    echo $_POST["user_lastname"];
-    echo "<br>";
-    echo $_POST["user_country"];  
-    echo "<br>";
-    echo $_POST["user_birthday"]; 
-    echo "<br>";
-    echo $_POST["user_email"] ; 
-    echo "<br>";
-    echo $_POST["user_password"]; 
+    // echo "<br>";
+    // echo $_POST["user_firstname"]; 
+    // echo "<br>";
+    // echo $_POST["user_lastname"];
+    // echo "<br>";
+    // echo $_POST["user_country"];  
+    // echo "<br>";
+    // echo $_POST["user_birthday"]; 
+    // echo "<br>";
+    // echo $_POST["user_email"] ; 
+    // echo "<br>";
+    // echo $_POST["user_password"]; 
 
         $firstname = $_POST['user_firstname'];
         $lastname = $_POST["user_lastname"];
@@ -33,6 +33,7 @@
         $user_password = $_POST["user_password"];       
     
         include "../db_connection.php";
+        // include "/php/db_connection.php";
 
         try {
                 $sql = "INSERT INTO users (user_firstname, user_lastname, user_country, user_birthday, User_email, user_password)
@@ -42,6 +43,7 @@
                 $conn->exec($sql);
                 // echo "New record created successfully";
                 echo '<script>alert("Registered successfully ")</script>';
+                
             }
         catch(PDOException $e)
             {
@@ -51,6 +53,7 @@
         $conn = null;
         
         header("location:../../index.php");
+        // header("location:/index.php");
        
 
         // $folderString = "../img/";

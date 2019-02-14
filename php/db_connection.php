@@ -5,12 +5,12 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "moviecentral"; //DB Name
+$database = "moviecentral";
 
 // $servername = "rdbms.strato.de";
-// $username = "U3665260";
+// $username = "U3665659";
 // $password = "@Codegorilla1234";
-// $database = "DB3665260";
+// $database = "DB3665659";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);

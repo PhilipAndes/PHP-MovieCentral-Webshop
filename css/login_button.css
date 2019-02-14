@@ -201,3 +201,12 @@ span.psw {
     background-color: #fff;
     color: #000;
 }
+
+@media screen and (max-width: 768px) {
+    img.avatar {
+        width: 100px;
+        height: 100px;
+        /* display: none; */
+    }
+
+}

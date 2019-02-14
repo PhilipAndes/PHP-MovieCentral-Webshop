@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Kosugi" rel="stylesheet">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     <!-- movie cards css -->
     <link rel="stylesheet" type="text/css" href="css/movies.css"/>
     <!-- menu css: -->
@@ -73,8 +75,8 @@
 <!-- personal info ---------------------------------------------------------------------------------------> 
     <div class="cards debug">
         <div class="card3 debug">' .
-            <h1>Philip Andes</h1>
-            <p class="gameinfo4"><span class="gameinfo3">find me on social media:</span></p>
+            <a href="http://philipandes.com" title="Go To"><h1>PhilipAndes.com</h1></a>
+            <p class="gameinfo4"><span class="gameinfo3">Or find me on Social Media:</span></p>
                 <div class="icons">
                     <a href="https://twitter.com/19Dbz88" target="_blank" title="twitter">
                     <i class="fab fa-twitter fa-2x"></i> 
