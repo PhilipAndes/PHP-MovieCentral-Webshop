@@ -7,10 +7,6 @@ $username = "root";
 $password = "";
 $database = "moviecentral";
 
-// $servername = "rdbms.strato.de";
-// $username = "U3665659";
-// $password = "@Codegorilla1234";
-// $database = "DB3665659";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
