@@ -15,3 +15,7 @@ This was the first time I used php sessions, a user and admin login and gifs.
 It was a good practice to make this. 
 
 The most hard part was the shopping cart. I made it work really basic, so when you are signed in, you are able to add a product to the cart, which will put it in the database with the signed in user id. You can browse to the cart and see the added product. I made a button on the cart items where you are able to delete the item from the cart, and database. 
+
+checkout the final result:
+
+http://moviecentral.philipandes.com/
